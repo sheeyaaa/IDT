@@ -1,0 +1,12 @@
+# Sweep.dev support depends on the availability of its hosted GitHub app.
+# Confirm the service's current installation and schema before enabling automation.
+branch: main
+gha_enabled: true
+blocked_dirs:
+  - .venv
+  - .tcgen
+  - dist
+  - build
+description: >
+  Make focused changes to the local-first tcgen project. Keep all model calls on the
+  configured Ollama endpoint, preserve blackboard schemas, and run ruff, mypy, and pytest.

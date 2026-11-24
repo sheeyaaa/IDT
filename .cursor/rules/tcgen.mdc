@@ -1,0 +1,13 @@
+---
+description: Architecture and coding rules for tcgen
+globs: "**/*.py"
+alwaysApply: true
+---
+- Keep every LLM call on the configured local Ollama endpoint; do not add cloud model providers.
+- Unload the prior Ollama role model before switching roles to fit constrained local memory.
+- Runtime role prompts belong in `src/tcgen/prompts/`, never inline in Python.
+- LangGraph nodes exchange validated Pydantic models through named blackboard fields.
+- Keep coverage and routing deterministic; the router must enforce the configured limit (maximum five).
+- Preserve stable requirement/test IDs and source traceability.
+- Inject model clients in tests; CI must not require Ollama or network model access.
+- Add type hints and public-function docstrings; validate with Ruff, mypy, and pytest.

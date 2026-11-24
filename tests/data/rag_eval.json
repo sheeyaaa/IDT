@@ -1,0 +1,17 @@
+[
+  {"question": "How does the router stop?", "expected_sources": ["src/tcgen/graph.py", "docs/architecture.md"]},
+  {"question": "Where are model names configured?", "expected_sources": ["config.yaml", "src/tcgen/config.py"]},
+  {"question": "What is the maximum refinement loop count?", "expected_sources": ["config.yaml", "src/tcgen/graph.py"]},
+  {"question": "How are requirement points deduplicated?", "expected_sources": ["src/tcgen/nodes/extractor.py"]},
+  {"question": "Which document formats can be parsed?", "expected_sources": ["src/tcgen/nodes/ingest.py", "docs/user-guide.md"]},
+  {"question": "How does chunking handle headings and tables?", "expected_sources": ["src/tcgen/nodes/chunker.py"]},
+  {"question": "Where do runtime prompts live?", "expected_sources": ["src/tcgen/prompts/", "docs/developer-guide.md"]},
+  {"question": "Which fields are required on a test case?", "expected_sources": ["src/tcgen/models.py"]},
+  {"question": "How are unsupported JSON responses handled?", "expected_sources": ["src/tcgen/llm.py"]},
+  {"question": "What files does the exporter write?", "expected_sources": ["src/tcgen/nodes/exporter.py"]},
+  {"question": "How do I build the repository RAG index?", "expected_sources": ["src/tcgen/cli.py", "src/tcgen/rag/indexer.py"]},
+  {"question": "How are source line citations produced?", "expected_sources": ["src/tcgen/rag/indexer.py", "src/tcgen/rag/qa.py"]},
+  {"question": "Which model is used for embeddings?", "expected_sources": ["config.yaml", "src/tcgen/rag/indexer.py"]},
+  {"question": "How does CI run checks?", "expected_sources": [".github/workflows/ci.yml"]},
+  {"question": "How can Ollama model names be overridden?", "expected_sources": ["src/tcgen/config.py", "docs/user-guide.md"]}
+]

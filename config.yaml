@@ -1,0 +1,23 @@
+ollama_base_url: http://localhost:11434
+models:
+  extractor:
+    name: qwen2.5:7b-instruct
+    temperature: 0.1
+  generator:
+    name: llama3.1:8b
+    temperature: 0.4
+  critic:
+    name: mistral:7b-instruct
+    temperature: 0.1
+  embeddings:
+    name: nomic-embed-text
+    temperature: 0.0
+max_iterations: 3
+quality_threshold: 8.0
+coverage_target: 95.0
+chunk_size_tokens: 800
+chunk_overlap_tokens: 100
+generation_batch_size: 8
+request_retries: 2
+keep_alive: 300
+chroma_path: .tcgen/chroma
